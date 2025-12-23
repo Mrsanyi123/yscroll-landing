@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>YScroll - Stop the Endless Scrolling</title>
+    <link rel="icon" href="./logo.png" type="image/logo">
     <meta name="description"
         content="Control your browser with your voice. Auto-scroll, read articles aloud, and get your work done hands-free." />
     <link rel="stylesheet" href="./style.css" />
@@ -26,7 +28,11 @@
                 <a href="#testimonials">Reviews</a>
                 <a href="#faq">FAQ</a>
             </div>
-            <button class="btn btn-primary nav-btn">Get Extension</button>
+
+            <a href="https://chromewebstore.google.com/detail/hlnhamlgmoijbfhilkanhifompndjaho"
+                class="btn btn-primary nav-btn" target="_blank" rel="noopener noreferrer">
+                Get Extension
+            </a>
         </nav>
         <div class="blob"></div>
 
@@ -42,10 +48,21 @@
                         and get more done — automatically.
                     </p>
                     <div class="hero-buttons">
-                        <button class="btn btn-white icon-btn">
+                        <a href="https://chromewebstore.google.com/detail/hlnhamlgmoijbfhilkanhifompndjaho"
+                            target="_blank" class="btn btn-white icon-btn" style="text-decoration: none">
                             <span>Get Extension</span>
                             <i data-lucide="chrome"></i>
-                        </button>
+                        </a>
+                        <a href="https://github.com/Mrsanyi123/yscroll-landing" target="_blank"
+                            class="btn btn-github-star icon-btn" style="text-decoration: none">
+                            <i data-lucide="github"></i>
+                            <span>Star on GitHub</span>
+                            <div class="star-count">
+                                <i data-lucide="star" class="star-icon"></i>
+                                <span id="gh-stars"></span>
+                            </div>
+                        </a>
+                        </a>
                     </div>
 
                 </div>
@@ -80,10 +97,16 @@
                 </div>
             </section>
 
-            <section id="testimonials" class="testimonials">
+            <section id="testimonials" class="testimonials locked-section">
                 <div class="section-header">
                     <h2>What our users say</h2>
                     <p>Join our happy users who have boosted their productivity.</p>
+                </div>
+
+                <div class="locked-overlay">
+                    <div class="lock-icon"><i data-lucide="lock" style="width: 48px; height: 48px;"></i></div>
+                    <h3>Reviews Locked</h3>
+                    <p>We are currently gathering reviews from our first users.</p>
                 </div>
 
                 <div class="marquee-container">
@@ -268,80 +291,93 @@
                     </details>
                 </div>
             </section>
-
-            <!-- Open Source Section -->
-            <section class="open-source-section">
-                <div class="os-content">
-                    <div class="os-text">
-                        <h2>Built in the Open Source</h2>
-                        <p>YScroll is proudly open source. Join our community, contribute code, or help us improve.</p>
-                        <div class="os-buttons">
-                            <a href="https://github.com" target="_blank" class="btn btn-white icon-btn"
-                                style="text-decoration: none;">
-                                <i data-lucide="github"></i>
-                                <span>Star on GitHub</span>
-                            </a>
-                            <a href="https://github.com" target="_blank" class="btn btn-glass icon-btn"
-                                style="text-decoration: none;">
-                                <i data-lucide="git-pull-request"></i>
-                                <span>Contribute</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="os-stats">
-                        <div class="stat-card">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label">Stars</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">0</span>
-                            <span class="stat-label">Contributors</span>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
         </main>
 
-        <footer>
+        <footer class="new-footer">
+            <div class="footer-cta">
+                <h2>Ready to take back your time?</h2>
+                <a href="https://chromewebstore.google.com/detail/hlnhamlgmoijbfhilkanhifompndjaho" target="_blank"
+                    class="btn btn-primary footer-cta-btn">Get YScroll Now</a>
+            </div>
             <div class="footer-container">
-                <div class="footer-content">
-                    <div class="footer-branding">
-                        <h3>YScroll</h3>
-                        <p>Take back control of your time. Stop the endless scrolling and focus on what matters.</p>
-                        <div class="social-links-footer">
-                            <a href="#" aria-label="Twitter"><i data-lucide="linkedin"></i></a>
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="./logo.png" alt="YScroll">
+                            YScroll
+                        </div>
+                        <p>Stop the endless scrolling and focus on what matters. Your time is valuable.</p>
+                        <div class="social-links-new">
+                            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
                             <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
-                            <a href="#" aria-label="Discord"><i data-lucide="youtube"></i></a>
+                            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
                         </div>
                     </div>
-                    <div class="footer-links-group">
-                        <div class="footer-column">
+
+                    <div class="footer-nav">
+                        <div class="footer-col">
                             <h4>Product</h4>
-                            <a href="#">Features</a>
-                            <a href="#">Pricing</a>
-                            <a href="#">FAQ</a>
+                            <a href="#features">Features</a>
+                            <a href="#testimonials">Reviews</a>
+                            <a href="#faq">FAQ</a>
                         </div>
-                        <div class="footer-column">
-                            <h4>Community</h4>
-                            <a href="#">Guidelines</a>
-                            <a href="#">Discussions</a>
-                            <a href="#">Issues</a>
-                        </div>
-                        <div class="footer-column">
+                        <div class="footer-col">
                             <h4>Legal</h4>
-                            <a href="#">Privacy</a>
-                            <a href="#">Terms</a>
+                            <a href="./privacy.html">Privacy Policy</a>
+                            <a href="./terms.html">Terms of Service</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Connect</h4>
+                            <a href="mailto:sanyidiriba123@gmail.com">Contact Support</a>
+                            <a href="https://github.com/Mrsanyi123/yscroll-landing" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 YScroll. All rights reserved. </p>
+
+                <div class="footer-divider"></div>
+
+                <div class="footer-bottom-new">
+                    <p>&copy; 2025 YScroll. Built by <a href="https://github.com/Mrsanyi123" target="_blank">Sanyi
+                            Diriba</a>.</p>
+                    <div class="footer-status">
+                        <span class="status-indicator"></span> All systems operational
+                    </div>
                 </div>
             </div>
         </footer>
     </div>
     <script type="module" src="/main.js"></script>
 </body>
+
+<script>
+    async function updateStarCount() {
+        const repo = "Mrsanyi123/yscroll-extension"; // Your repo
+        const starElement = document.getElementById('gh-stars');
+
+        try {
+            const response = await fetch(`https://api.github.com/repos/Mrsanyi123/yscroll-extension`);
+            if (!response.ok) return; // Exit if API limit reached
+
+            const data = await response.json();
+            const count = data.stargazers_count;
+
+            // Formatter: converts 1200 to 1.2k
+            const formatter = Intl.NumberFormat('en', { notation: 'compact' });
+
+            // Update the text even if 0
+            starElement.innerText = formatter.format(count);
+        } catch (error) {
+            console.error("GitHub API error:", error);
+        }
+    }
+
+    // Run it immediately
+    updateStarCount();
+
+</script>
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+    data-id="sanyidiriba" data-description="Support me on Buy me a coffee!"
+    data-message="Thanks for Visiting. You Can Buy Me Coffee." data-color="#5F7FFF" data-position="Right"
+    data-x_margin="18" data-y_margin="18"></script>
 
 </html>
